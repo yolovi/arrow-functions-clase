@@ -47,36 +47,24 @@ console.log(staffRoleHobbies);
 
 // // Dado el siguiente array, generar un segundo array que consiga generar de salida el resultado esperado:
 
-const foodList = ["Pizza", "Ramen", "Paella", "Entrecot"];
+const foodList_ = ["Pizza", "Ramen", "Paella", "Entrecot"];
 
-const ciudades = ['Italia', 'Japón', 'Valencia']
-
-// + foodList.map(food => {
-//   return ` ${food}`
-// })
+const ciudades = ['Italia', 'Japón', 'Valencia', ""]
 
 const cityListSentences = ciudades.map(ciudad => {
   return `Como soy de ${ciudad} amo comer ` 
 })
 
-console.log(cityListSentences)
-
-let i = 0
-
 const foodSentence = cityListSentences.map((city, i) => {
-  console.log(foodList[3])
-  console.log(i)
-
-  if(i == foodList[3]) {
-    console.log( `Aunque no como carne, el ${foodList} es sabroso`)
-    // console.log( `Aunque no como carne, el ${foodList[i]} es sabroso`)
-
+  if (i === foodList_.length - 1) {
+    return `Aunque no como carne, el ${foodList_[i]} es sabroso`;
   }
-  return city + foodList[i] 
-    
-} )
+  return city + foodList_[i];
+});
+  
+console.log(foodSentence);
 
-console.log(foodSentence)
+
 
 // //Resultado esperado
 // /* [
@@ -88,8 +76,31 @@ console.log(foodSentence)
 // */
 
 
+//OTRA VERSION seria con un SWITCH:
 
-//TODO: HASTA AQUI ------------------------
+
+// const foodList_ = ["Pizza", "Ramen", "Paella", "Entrecot"];
+// const ciudades = ["Italia", "Japón", "Valencia"];
+
+
+// const foodSentence = foodList_.map((food, i) => {
+//   switch(food) {
+//     case "Pizza":
+//       return `Como soy de ${ciudades[i]}, amo comer ${food}`;
+
+//     case "Ramen":
+//       return `Como soy de ${ciudades[i]}, amo comer ${food}` ;
+
+//     case "Paella":
+//       return `Como soy de ${ciudades[i]}, amo comer ${food}` ;
+
+//     default: 
+//       return `Aunque no como carne, el ${food} es sabroso`
+//   }
+// })
+
+// console.log(foodSentence)
+
 
 //-------------------------------------------------------
 
