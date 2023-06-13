@@ -44,7 +44,7 @@ const mayor25map = gente.map((persona) => {
   //OK // Crea un array con la gente que empieza por J.
   
   const genteJmap = gente.map((persona) => {
-    if (persona.nombre.charAt(0).toLocaleUpperCase() === "J") {
+    if (persona.nombre.charAt(0).toUpperCase() === "J") {
       return persona;
     }
   });

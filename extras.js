@@ -27,7 +27,7 @@ const staff = [
 ];
 
 const staffRoleHobbies = staff.map((persona) => {
-  return `${persona.name} es ${persona.role} y le gusta ${persona.hobbies}`;
+  return `${persona.name} es ${persona.role} y le gusta ${persona.hobbies[0]} y ${persona.hobbies[1]}`;
 });
 
 console.log(staffRoleHobbies);
@@ -76,30 +76,56 @@ console.log(foodSentence);
 // */
 
 
-//OTRA VERSION seria con un SWITCH:
+//OTRA VERSION seria con un SWITCH, asignando en el switch el indice y como coincide en cada posicion con las comidas:
 
 
-// const foodList_ = ["Pizza", "Ramen", "Paella", "Entrecot"];
-// const ciudades = ["Italia", "Japón", "Valencia"];
+const foodList2 = ["Pizza", "Ramen", "Paella", "Entrecot"];
+const ciudades2 = ["Italia", "Japón", "Valencia"];
 
 
-// const foodSentence = foodList_.map((food, i) => {
-//   switch(food) {
-//     case "Pizza":
-//       return `Como soy de ${ciudades[i]}, amo comer ${food}`;
+const foodSentence2 = foodList_.map((food, i) => {
+  switch(food) {
+    case "Pizza":
+      return `Como soy de ${ciudades[i]}, amo comer ${food}`;
 
-//     case "Ramen":
-//       return `Como soy de ${ciudades[i]}, amo comer ${food}` ;
+    case "Ramen":
+      return `Como soy de ${ciudades[i]}, amo comer ${food}` ;
 
-//     case "Paella":
-//       return `Como soy de ${ciudades[i]}, amo comer ${food}` ;
+    case "Paella":
+      return `Como soy de ${ciudades[i]}, amo comer ${food}` ;
 
-//     default: 
-//       return `Aunque no como carne, el ${food} es sabroso`
-//   }
-// })
+    default: 
+      return `Aunque no como carne, el ${food} es sabroso`
+  }
+})
 
-// console.log(foodSentence)
+console.log(foodSentence2)
+
+
+//OTRA VERSION con un SWITCH, indicarle en ciudades la posicion del array:
+
+
+const foodList3 = ["Pizza", "Ramen", "Paella", "Entrecot"];
+const ciudades3 = ["Italia", "Japón", "Valencia"];
+
+
+const foodSentence3 = foodList_.map((food) => {
+  switch(food) {
+    case "Pizza":
+      return `Como soy de ${ciudades[0]}, amo comer ${food}`;
+
+    case "Ramen":
+      return `Como soy de ${ciudades[1]}, amo comer ${food}` ;
+
+    case "Paella":
+      return `Como soy de ${ciudades[2]}, amo comer ${food}` ;
+
+    default: 
+      return `Aunque no como carne, el ${food} es sabroso`
+  }
+})
+
+console.log(foodSentence3)
 
 
 //-------------------------------------------------------

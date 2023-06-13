@@ -40,7 +40,7 @@ const mayor25 = [];
 
 gente.forEach((persona) => {
   if (persona.edad > 25) {
-    mayor25.push(persona.edad);
+    mayor25.push(persona);
   }
 });
 
